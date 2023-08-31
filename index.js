@@ -12,7 +12,7 @@ app.get('/',(req,res)=>{
         res: "hello App"
     })
 })
-const port  = 8080;
+const port  = process.env.PORT||8080;
 app.listen(port,async ()=>{
     console.log(`server is running on http://localhost:${port}`);
     await MongoConnect();
